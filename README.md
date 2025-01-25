@@ -10,9 +10,6 @@ This is the main HTML file for the personality test. It provides a user-friendly
 ### `definition.html`
 This HTML file displays the definition of a personality trait based on URL parameters. It provides detailed explanations of each trait, helping users better understand the attributes associated with their personality type.
 
-### `definitions.txt`
-This text file contains a list of personality traits along with their definitions. It is used by the application to provide accurate descriptions of each trait when users want more information about a specific trait.
-
 ## Personality Types
 
 The personality test categorizes results into four types:
