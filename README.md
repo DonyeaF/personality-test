@@ -4,7 +4,7 @@ This repository contains a web-based personality test application designed to he
 
 ## Files in this Repository
 
-### `personality.html`
+### `index.html`
 This is the main HTML file for the personality test. It provides a user-friendly interface where users can select personality traits from different categories. Based on their selections, the application calculates and displays scores for each category, helping users identify their personality type.
 
 ### `definition.html`
@@ -29,7 +29,7 @@ The personality test categorizes results into four types:
 
 ## Usage
 
-To use this personality test application, simply open the `personality.html` file in your browser. Users can interact with the test by selecting traits and receiving results. Definitions of traits can be viewed by visiting the `definition.html` page with the appropriate URL parameters.
+To use this personality test application, simply open the `index.html` file in your browser. Users can interact with the test by selecting traits and receiving results. Definitions of traits can be viewed by visiting the `definition.html` page with the appropriate URL parameters.
 
 ### Hosting
 This application can be easily hosted on GitHub Pages or any other static hosting platform for public access.
