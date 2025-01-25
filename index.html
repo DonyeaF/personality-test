@@ -67,11 +67,13 @@
       font-size: 16px;
     }
   </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
   <h1>Personality Test</h1>
   <form id="personalityTest">
-    <table>
+    <table id="table1">
       <thead>
         <tr>
           <th>Category A</th>
@@ -1180,7 +1182,7 @@
     <button type="button" onclick="calculateScores()">Calculate Scores</button>
   </form>
 
-  <table>
+  <table id="table2">
     <thead>
       <tr>
         <th>Type</th>
@@ -1398,6 +1400,8 @@
     <p style="text-align: center;">Adapted from Wired That Way: The Comprehensive Personality Plan, by Marita Littauer and Florence Littauer, 2006</p>
   </footer>
 
+  <button onclick="downloadPDF()">Download as PDF</button>
+
   <script>
     function calculateScores() {
       const categories = ['A', 'B', 'C', 'D'];
@@ -1406,6 +1410,31 @@
         const selectedOptions = document.querySelectorAll(`input[name='${category}']:checked`);
         document.getElementById(`total${category}`).textContent = selectedOptions.length;
       });
+    }
+
+    async function downloadPDF() {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF('p', 'mm', 'a4');
+      const body = document.body;
+      const canvas = await html2canvas(body);
+      const imgData = canvas.toDataURL('image/png');
+      const imgWidth = 210; // A4 width in mm
+      const pageHeight = 297; // A4 height in mm
+      const imgHeight = (canvas.height * imgWidth) / canvas.width;
+      let heightLeft = imgHeight;
+      let position = 0;
+
+      doc.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+      heightLeft -= pageHeight;
+
+      while (heightLeft >= 0) {
+        position = heightLeft - imgHeight;
+        doc.addPage();
+        doc.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+        heightLeft -= pageHeight;
+      }
+
+      doc.save('personality_test.pdf');
     }
   </script>
 </body>
