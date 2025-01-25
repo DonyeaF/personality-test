@@ -1,0 +1,1412 @@
+<!-- 
+  Author: Donyea Fearon
+  Date: 01.25.2025
+  Description: Personality Test HTML Page
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personality Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    td {
+      vertical-align: middle;
+    }
+    .link-icon {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-left: 5px;
+      background: url('https://img.icons8.com/?size=100&id=85777&format=png&color=000000') no-repeat center;
+      background-size: contain;
+      cursor: pointer;
+    }
+    .link-icon:hover::after {
+      content: attr(data-definition);
+      position: absolute;
+      background: #000;
+      color: #fff;
+      padding: 5px;
+      border-radius: 5px;
+      font-size: 12px;
+      top: -30px;
+      left: 0;
+      white-space: nowrap;
+      z-index: 1000;
+    }
+    .link-container {
+      position: relative;
+      display: inline-block;
+    }
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 15px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Personality Test</h1>
+  <form id="personalityTest">
+    <table>
+      <thead>
+        <tr>
+          <th>Category A</th>
+          <th>Category B</th>
+          <th>Category C</th>
+          <th>Category D</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Animated</label>
+            <a href="definition.html?word=Animated&definition=Full%20of%20life%20or%20excitement;%20lively." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Full of life or excitement; lively."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Adventurous</label>
+            <a href="definition.html?word=Adventurous&definition=Willing%20to%20take%20risks%20or%20to%20try%20out%20new%20methods,%20ideas,%20or%20experiences." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Willing to take risks or to try out new methods, ideas, or experiences."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Analytical</label>
+            <a href="definition.html?word=Analytical&definition=Relating%20to%20or%20using%20analysis%20or%20logical%20reasoning." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Relating to or using analysis or logical reasoning."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Adaptable</label>
+            <a href="definition.html?word=Adaptable&definition=Able%20to%20adjust%20to%20new%20conditions." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Able to adjust to new conditions."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Playful</label>
+            <a href="definition.html?word=Playful&definition=Fond%20of%20games%20and%20amusement;%20lighthearted." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Fond of games and amusement; lighthearted."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Persuasive</label>
+            <a href="definition.html?word=Persuasive&definition=Good%20at%20convincing%20someone%20to%20do%20or%20believe%20something%20through%20reasoning%20or%20the%20use%20of%20temptation." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Good at convincing someone to do or believe something through reasoning or the use of temptation."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Persistent</label>
+            <a href="definition.html?word=Persistent&definition=Continuing%20firmly%20or%20obstinately%20in%20a%20course%20of%20action%20in%20spite%20of%20difficulty%20or%20opposition." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Continuing firmly or obstinately in a course of action in spite of difficulty or opposition."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Peaceful</label>
+            <a href="definition.html?word=Peaceful&definition=Free%20from%20disturbance;%20tranquil." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Free from disturbance; tranquil."></span>
+            </a>
+          </td>
+        </tr>
+
+        <!-- Add more rows as needed -->
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Sociable</label>
+            <a href="definition.html?word=Sociable&definition=Willing%20to%20talk%20and%20engage%20in%20activities%20with%20other%20people;%20friendly." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Willing to talk and engage in activities with other people; friendly."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Strong-willed</label>
+            <a href="definition.html?word=Strong-willed&definition=Determined%20to%20do%20as%20one%20wants%20even%20if%20other%20people%20advise%20against%20it." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Determined to do as one wants even if other people advise against it."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Self-sacrificing</label>
+            <a href="definition.html?word=Self-sacrificing&definition=Giving%20up%20one's%20own%20interests%20or%20wishes%20in%20order%20to%20help%20others%20or%20advance%20a%20cause." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Giving up one's own interests or wishes in order to help others or advance a cause."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Submissive</label>
+            <a href="definition.html?word=Submissive&definition=Ready%20to%20conform%20to%20the%20authority%20or%20will%20of%20others;%20meekly%20obedient%20or%20passive." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Ready to conform to the authority or will of others; meekly obedient or passive."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Convincing</label>
+            <a href="definition.html?word=Convincing&definition=Capable%20of%20causing%20someone%20to%20believe%20that%20something%20is%20true%20or%20real." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Capable of causing someone to believe that something is true or real."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Competitive</label>
+            <a href="definition.html?word=Competitive&definition=Having%20a%20strong%20desire%20to%20be%20more%20successful%20than%20others." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Having a strong desire to be more successful than others."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Considerate</label>
+            <a href="definition.html?word=Considerate&definition=Careful%20not%20to%20cause%20inconvenience%20or%20hurt%20to%20others." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Careful not to cause inconvenience or hurt to others."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Controlled</label>
+            <a href="definition.html?word=Controlled&definition=Not%20showing%20emotion;%20having%20one's%20feelings%20under%20control." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Not showing emotion; having one's feelings under control."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Refreshing</label>
+            <a href="definition.html?word=Refreshing&definition=Serving%20to%20refresh%20or%20revive%20someone." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Serving to refresh or revive someone."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Resourceful</label>
+            <a href="definition.html?word=Resourceful&definition=Having%20the%20ability%20to%20find%20quick%20and%20clever%20ways%20to%20overcome%20difficulties." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Having the ability to find quick and clever ways to overcome difficulties."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Respectful</label>
+            <a href="definition.html?word=Respectful&definition=Feeling%20or%20showing%20deference%20and%20respect." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Feeling or showing deference and respect."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Reserved</label>
+            <a href="definition.html?word=Reserved&definition=Slow%20to%20reveal%20emotion%20or%20opinions." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Slow to reveal emotion or opinions."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Spirited</label>
+            <a href="definition.html?word=Spirited&definition=Full%20of%20energy,%20enthusiasm,%20and%20determination." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Full of energy, enthusiasm, and determination."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Self-reliant</label>
+            <a href="definition.html?word=Self-reliant&definition=Relying%20on%20one's%20own%20powers%20and%20resources%20rather%20than%20those%20of%20others." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Relying on one's own powers and resources rather than those of others."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Sensitive</label>
+            <a href="definition.html?word=Sensitive&definition=Quick%20to%20detect%20or%20respond%20to%20slight%20changes,%20signals,%20or%20influences." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Quick to detect or respond to slight changes, signals, or influences."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Satisfied</label>
+            <a href="definition.html?word=Satisfied&definition=Contented;%20pleased." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Contented; pleased."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Promoter</label>
+            <a href="definition.html?word=Promoter&definition=A%20person%20or%20company%20that%20finances%20or%20organizes%20a%20project%20or%20event." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="A person or company that finances or organizes a project or event."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Positive</label>
+            <a href="definition.html?word=Positive&definition=With%20no%20possibility%20of%20doubt;%20clear%20and%20definite." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="With no possibility of doubt; clear and definite."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Planner</label>
+            <a href="definition.html?word=Planner&definition=A%20person%20who%20makes%20plans." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="A person who makes plans."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Patient</label>
+            <a href="definition.html?word=Patient&definition=Able%20to%20accept%20or%20tolerate%20delays,%20problems,%20or%20suffering%20without%20becoming%20annoyed%20or%20anxious." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Able to accept or tolerate delays, problems, or suffering without becoming annoyed or anxious."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Spontaneous</label>
+            <a href="definition.html?word=Spontaneous&definition=Performed%20or%20occurring%20as%20a%20result%20of%20a%20sudden%20inner%20impulse%20or%20inclination%20and%20without%20premeditation%20or%20external%20stimulus." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Performed or occurring as a result of a sudden inner impulse or inclination and without premeditation or external stimulus."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Sure</label>
+            <a href="definition.html?word=Sure&definition=Confident%20in%20what%20one%20thinks%20or%20knows;%20having%20no%20doubt%20that%20one%20is%20right." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Confident in what one thinks or knows; having no doubt that one is right."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Scheduled</label>
+            <a href="definition.html?word=Scheduled&definition=Included%20in%20or%20planned%20according%20to%20a%20schedule." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Included in or planned according to a schedule."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Shy</label>
+            <a href="definition.html?word=Shy&definition=Being%20reserved%20or%20having%20or%20showing%20nervousness%20or%20timidity%20in%20the%20company%20of%20other%20people." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Being reserved or having or showing nervousness or timidity in the company of other people."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Optimistic</label>
+            <a href="definition.html?word=Optimistic&definition=Hopeful%20and%20confident%20about%20the%20future." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Hopeful and confident about the future."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Outspoken</label>
+            <a href="definition.html?word=Outspoken&definition=Frank%20in%20stating%20one's%20opinions,%20especially%20if%20they%20are%20critical%20or%20controversial." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Frank in stating one's opinions, especially if they are critical or controversial."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Orderly</label>
+            <a href="definition.html?word=Orderly&definition=Neatly%20and%20methodically%20arranged." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Neatly and methodically arranged."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Obliging</label>
+            <a href="definition.html?word=Obliging&definition=Willing%20to%20do%20a%20service%20or%20kindness;%20helpful." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Willing to do a service or kindness; helpful."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Funny</label>
+            <a href="definition.html?word=Funny&definition=Causing%20laughter%20or%20amusement;%20humorous." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Causing laughter or amusement; humorous."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Forceful</label>
+            <a href="definition.html?word=Forceful&definition=Strong%20and%20assertive;%20vigorous%20and%20powerful." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Strong and assertive; vigorous and powerful."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Faithful</label>
+            <a href="definition.html?word=Faithful&definition=Loyal,%20constant,%20and%20steadfast." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Loyal, constant, and steadfast."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Friendly</label>
+            <a href="definition.html?word=Friendly&definition=Kind%20and%20pleasant." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Kind and pleasant."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Delightful</label>
+            <a href="definition.html?word=Delightful&definition=Causing%20delight;%20charming." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Causing delight; charming."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Daring</label>
+            <a href="definition.html?word=Daring&definition=(of%20a%20person%20or%20action)%20adventurous%20or%20audaciously%20bold." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="(of a person or action) adventurous or audaciously bold."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Detailed</label>
+            <a href="definition.html?word=Detailed&definition=Having%20many%20details%20or%20facts;%20showing%20attention%20to%20detail." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Having many details or facts; showing attention to detail."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Diplomatic</label>
+            <a href="definition.html?word=Diplomatic&definition=Of%20or%20concerning%20the%20profession,%20activity,%20or%20skill%20of%20managing%20international%20relations." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Of or concerning the profession, activity, or skill of managing international relations."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Cheerful</label>
+            <a href="definition.html?word=Cheerful&definition=Noticeably%20happy%20and%20optimistic." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Noticeably happy and optimistic."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Confident</label>
+            <a href="definition.html?word=Confident&definition=Feeling%20or%20showing%20confidence%20in%20oneself;%20self-assured." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Feeling or showing confidence in oneself; self-assured."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Cultured</label>
+            <a href="definition.html?word=Cultured&definition=Characterized%20by%20refined%20taste%20and%20manners%20and%20good%20education." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Characterized by refined taste and manners and good education."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Consistent</label>
+            <a href="definition.html?word=Consistent&definition=Acting%20or%20done%20in%20the%20same%20way%20over%20time,%20especially%20so%20as%20to%20be%20fair%20or%20accurate." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Acting or done in the same way over time, especially so as to be fair or accurate."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Inspiring</label>
+            <a href="definition.html?word=Inspiring&definition=Having%20the%20effect%20of%20inspiring%20someone." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Having the effect of inspiring someone."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Independent</label>
+            <a href="definition.html?word=Independent&definition=Free%20from%20outside%20control;%20not%20depending%20on%20another's%20authority." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Free from outside control; not depending on another's authority."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Idealistic</label>
+            <a href="definition.html?word=Idealistic&definition=Characterized%20by%20idealism;%20unrealistically%20aiming%20for%20perfection." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Characterized by idealism; unrealistically aiming for perfection."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Inoffensive</label>
+            <a href="definition.html?word=Inoffensive&definition=Not%20objectionable%20or%20harmful." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Not objectionable or harmful."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Demonstrative</label>
+            <a href="definition.html?word=Demonstrative&definition=(of%20a%20person)%20tending%20to%20show%20feelings,%20especially%20of%20affection,%20openly." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="(of a person) tending to show feelings, especially of affection, openly."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Decisive</label>
+            <a href="definition.html?word=Decisive&definition=Settling%20an%20issue;%20producing%20a%20definite%20result." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Settling an issue; producing a definite result."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Deep</label>
+            <a href="definition.html?word=Deep&definition=Extending%20far%20down%20from%20the%20top%20or%20surface." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Extending far down from the top or surface."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Dry Humor</label>
+            <a href="definition.html?word=Dry%20Humor&definition=A%20form%20of%20wit%20characterized%20by%20deliberate%20display%20of%20a%20lack%20of%20or%20no%20emotion,%20commonly%20as%20a%20form%20of%20irony." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="A form of wit characterized by deliberate display of a lack of or no emotion, commonly as a form of irony."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Mixes Easily</label>
+            <a href="definition.html?word=Mixes%20Easily&definition=To%20combine%20or%20blend%20into%20one%20mass%20or%20mixture." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="To combine or blend into one mass or mixture."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Mover</label>
+            <a href="definition.html?word=Mover&definition=A%20person%20or%20thing%20in%20motion." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="A person or thing in motion."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Musical</label>
+            <a href="definition.html?word=Musical&definition=Having%20a%20pleasant%20sound;%20melodious%20or%20tuneful." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Having a pleasant sound; melodious or tuneful."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Mediator</label>
+            <a href="definition.html?word=Mediator&definition=A%20person%20who%20attempts%20to%20make%20people%20involved%20in%20a%20conflict%20come%20to%20an%20agreement;%20a%20go-between." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="A person who attempts to make people involved in a conflict come to an agreement; a go-between."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Talker</label>
+            <a href="definition.html?word=Talker&definition=A%20person%20who%20talks%20a%20lot." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="A person who talks a lot."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Tenacious</label>
+            <a href="definition.html?word=Tenacious&definition=Tending%20to%20keep%20a%20firm%20hold%20of%20something;%20clinging%20or%20adhering%20closely." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Tending to keep a firm hold of something; clinging or adhering closely."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Thoughtful</label>
+            <a href="definition.html?word=Thoughtful&definition=Absorbed%20in%20or%20involving%20thought." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Absorbed in or involving thought."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Tolerant</label>
+            <a href="definition.html?word=Tolerant&definition=Showing%20willingness%20to%20allow%20the%20existence%20of%20opinions%20or%20behavior%20that%20one%20does%20not%20necessarily%20agree%20with." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Showing willingness to allow the existence of opinions or behavior that one does not necessarily agree with."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Lively</label>
+            <a href="definition.html?word=Lively&definition=Full%20of%20life%20and%20energy;%20active%20and%20outgoing." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Full of life and energy; active and outgoing."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Leader</label>
+            <a href="definition.html?word=Leader&definition=The%20person%20who%20leads%20or%20commands%20a%20group,%20organization,%20or%20country." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="The person who leads or commands a group, organization, or country."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Loyal</label>
+            <a href="definition.html?word=Loyal&definition=Giving%20or%20showing%20firm%20and%20constant%20support%20or%20allegiance%20to%20a%20person%20or%20institution." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Giving or showing firm and constant support or allegiance to a person or institution."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Listener</label>
+            <a href="definition.html?word=Listener&definition=A%20person%20who%20listens,%20especially%20someone%20who%20does%20so%20in%20an%20attentive%20manner." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="A person who listens, especially someone who does so in an attentive manner."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Cute</label>
+            <a href="definition.html?word=Cute&definition=Attractive%20in%20a%20pretty%20or%20endearing%20way." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Attractive in a pretty or endearing way."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Chief</label>
+            <a href="definition.html?word=Chief&definition=A%20leader%20or%20ruler%20of%20a%20people%20or%20clan." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="A leader or ruler of a people or clan."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Chartmaker</label>
+            <a href="definition.html?word=Chartmaker&definition=A%20person%20who%20makes%20charts." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="A person who makes charts."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Contented</label>
+            <a href="definition.html?word=Contented&definition=Happy%20and%20at%20ease." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Happy and at ease."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Popular</label>
+            <a href="definition.html?word=Popular&definition=Liked%20or%20admired%20by%20many%20people%20or%20by%20a%20particular%20person%20or%20group." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Liked or admired by many people or by a particular person or group."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Productive</label>
+            <a href="definition.html?word=Productive&definition=Achieving%20or%20producing%20a%20significant%20amount%20or%20result." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Achieving or producing a significant amount or result."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Perfectionist</label>
+            <a href="definition.html?word=Perfectionist&definition=A%20person%20who%20refuses%20to%20accept%20any%20standard%20short%20of%20perfection." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="A person who refuses to accept any standard short of perfection."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Permissive</label>
+            <a href="definition.html?word=Permissive&definition=Allowing%20or%20characterized%20by%20great%20or%20excessive%20freedom%20of%20behavior." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Allowing or characterized by great or excessive freedom of behavior."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Bouncy</label>
+            <a href="definition.html?word=Bouncy&definition=(of%20a%20person)%20cheerful%20and%20lively." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="(of a person) cheerful and lively."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Bold</label>
+            <a href="definition.html?word=Bold&definition=(of%20a%20person,%20action,%20or%20idea)%20showing%20a%20willingness%20to%20take%20risks;%20confident%20and%20courageous." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="(of a person, action, or idea) showing a willingness to take risks; confident and courageous."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Behaved</label>
+            <a href="definition.html?word=Behaved&definition=Having%20good%20manners." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Having good manners."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Balanced</label>
+            <a href="definition.html?word=Balanced&definition=Keeping%20or%20showing%20a%20balance;%20arranged%20in%20good%20proportions." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Keeping or showing a balance; arranged in good proportions."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Brassy</label>
+            <a href="definition.html?word=Brassy&definition=(typically%20of%20a%20woman)%20tastelessly%20showy%20or%20loud%20in%20appearance%20or%20manner." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="(typically of a woman) tastelessly showy or loud in appearance or manner."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Bossy</label>
+            <a href="definition.html?word=Bossy&definition=Fond%20of%20giving%20people%20orders;%20domineering." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Fond of giving people orders; domineering."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Bashful</label>
+            <a href="definition.html?word=Bashful&definition=Reluctant%20to%20draw%20attention%20to%20oneself;%20shy." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Reluctant to draw attention to oneself; shy."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Blank</label>
+            <a href="definition.html?word=Blank&definition=Not%20marked%20or%20decorated." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Not marked or decorated."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Undisciplined</label>
+            <a href="definition.html?word=Undisciplined&definition=Lacking%20in%20discipline;%20uncontrolled%20in%20behavior%20or%20manner." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Lacking in discipline; uncontrolled in behavior or manner."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Unsympathetic</label>
+            <a href="definition.html?word=Unsympathetic&definition=Not%20feeling,%20showing,%20or%20expressing%20sympathy." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Not feeling, showing, or expressing sympathy."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Unforgiving</label>
+            <a href="definition.html?word=Unforgiving&definition=Not%20willing%20to%20forgive%20or%20excuse%20people's%20faults%20or%20wrongdoings." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Not willing to forgive or excuse people's faults or wrongdoings."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Unenthusiastic</label>
+            <a href="definition.html?word=Unenthusiastic&definition=Not%20having%20or%20showing%20enthusiasm." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Not having or showing enthusiasm."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Repetitious</label>
+            <a href="definition.html?word=Repetitious&definition=Containing%20or%20characterized%20by%20repetition,%20especially%20when%20unnecessary%20or%20tiresome." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Containing or characterized by repetition, especially when unnecessary or tiresome."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Resistant</label>
+            <a href="definition.html?word=Resistant&definition=Offering%20resistance%20to%20something%20or%20someone." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Offering resistance to something or someone."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Resentful</label>
+            <a href="definition.html?word=Resentful&definition=Feeling%20or%20expressing%20bitterness%20or%20indignation%20at%20having%20been%20treated%20unfairly." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Feeling or expressing bitterness or indignation at having been treated unfairly."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Reluctant</label>
+            <a href="definition.html?word=Reluctant&definition=Unwilling%20and%20hesitant;%20disinclined." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Unwilling and hesitant; disinclined."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Forgetful</label>
+            <a href="definition.html?word=Forgetful&definition=Apt%20or%20likely%20not%20to%20remember." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Apt or likely not to remember."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Frank</label>
+            <a href="definition.html?word=Frank&definition=Open,%20honest,%20and%20direct%20in%20speech%20or%20writing,%20especially%20when%20dealing%20with%20unpalatable%20matters." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Open, honest, and direct in speech or writing, especially when dealing with unpalatable matters."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Fussy</label>
+            <a href="definition.html?word=Fussy&definition=Showing%20excessive%20or%20anxious%20concern%20about%20detail." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Showing excessive or anxious concern about detail."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Fearful</label>
+            <a href="definition.html?word=Fearful&definition=Feeling%20or%20showing%20fear%20or%20anxiety." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Feeling or showing fear or anxiety."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Interrupts</label>
+            <a href="definition.html?word=Interrupts&definition=Stop%20the%20continuous%20progress%20of%20(an%20activity%20or%20process)." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Stop the continuous progress of (an activity or process)."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Impatient</label>
+            <a href="definition.html?word=Impatient&definition=Having%20or%20showing%20a%20tendency%20to%20be%20quickly%20irritated%20or%20provoked." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Having or showing a tendency to be quickly irritated or provoked."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Insecure</label>
+            <a href="definition.html?word=Insecure&definition=Not%20firmly%20fixed;%20liable%20to%20give%20way%20or%20break." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Not firmly fixed; liable to give way or break."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Indecisive</label>
+            <a href="definition.html?word=Indecisive&definition=Not%20settling%20an%20issue." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Not settling an issue."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Unpredictable</label>
+            <a href="definition.html?word=Unpredictable&definition=Not%20able%20to%20be%20predicted." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Not able to be predicted."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Unaffectionate</label>
+            <a href="definition.html?word=Unaffectionate&definition=Not%20showing%20affection." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Not showing affection."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Unpopular</label>
+            <a href="definition.html?word=Unpopular&definition=Not%20liked%20or%20popular." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Not liked or popular."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Uninvolved</label>
+            <a href="definition.html?word=Uninvolved&definition=Not%20connected%20or%20concerned%20with%20someone%20or%20something." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Not connected or concerned with someone or something."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Haphazard</label>
+            <a href="definition.html?word=Haphazard&definition=Lacking%20any%20obvious%20principle%20of%20organization." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Lacking any obvious principle of organization."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Headstrong</label>
+            <a href="definition.html?word=Headstrong&definition=Self-willed%20and%20obstinate." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Self-willed and obstinate."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Hard-to-please</label>
+            <a href="definition.html?word=Hard-to-please&definition=Difficult%20to%20satisfy." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Difficult to satisfy."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Hesitant</label>
+            <a href="definition.html?word=Hesitant&definition=Tentative,%20unsure,%20or%20slow%20in%20acting%20or%20speaking." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Tentative, unsure, or slow in acting or speaking."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Permissive</label>
+            <a href="definition.html?word=Permissive&definition=Allowing%20or%20characterized%20by%20great%20or%20excessive%20freedom%20of%20behavior." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Allowing or characterized by great or excessive freedom of behavior."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Proud</label>
+            <a href="definition.html?word=Proud&definition=Feeling%20deep%20pleasure%20or%20satisfaction%20as%20a%20result%20of%20one's%20own%20achievements." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Feeling deep pleasure or satisfaction as a result of one's own achievements."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Pessimistic</label>
+            <a href="definition.html?word=Pessimistic&definition=Tending%20to%20see%20the%20worst%20aspect%20of%20things%20or%20believe%20that%20the%20worst%20will%20happen." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Tending to see the worst aspect of things or believe that the worst will happen."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Plain</label>
+            <a href="definition.html?word=Plain&definition=Not%20decorated%20or%20elaborate;%20simple%20or%20ordinary%20in%20character." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Not decorated or elaborate; simple or ordinary in character."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Angered Easily</label>
+            <a href="definition.html?word=Angered%20Easily&definition=Quick%20to%20become%20angry." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Quick to become angry."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Argumentative</label>
+            <a href="definition.html?word=Argumentative&definition=Given%20to%20expressing%20divergent%20or%20opposite%20views." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Given to expressing divergent or opposite views."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Alienated</label>
+            <a href="definition.html?word=Alienated&definition=Experiencing%20or%20inducing%20feelings%20of%20isolation%20or%20estrangement." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Experiencing or inducing feelings of isolation or estrangement."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Aimless</label>
+            <a href="definition.html?word=Aimless&definition=Without%20purpose%20or%20direction." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Without purpose or direction."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Naive</label>
+            <a href="definition.html?word=Naive&definition=(of%20a%20person%20or%20action)%20showing%20a%20lack%20of%20experience,%20wisdom,%20or%20judgment." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="(of a person or action) showing a lack of experience, wisdom, or judgment."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Nervy</label>
+            <a href="definition.html?word=Nervy&definition=Easily%20agitated%20or%20alarmable;%20highly%20strung." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Easily agitated or alarmable; highly strung."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Neg attitude</label>
+            <a href="definition.html?word=Neg%20attitude&definition=Having%20a%20negative%20attitude." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Having a negative attitude."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Nonchalant</label>
+            <a href="definition.html?word=Nonchalant&definition=(of%20a%20person%20or%20manner)%20feeling%20or%20appearing%20casually%20calm%20and%20relaxed;%20not%20displaying%20anxiety,%20interest,%20or%20enthusiasm." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="(of a person or manner) feeling or appearing casually calm and relaxed; not displaying anxiety, interest, or enthusiasm."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Wants Credit</label>
+            <a href="definition.html?word=Wants%20Credit&definition=Desires%20recognition%20or%20acknowledgment%20for%20something." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Desires recognition or acknowledgment for something."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Workaholic</label>
+            <a href="definition.html?word=Workaholic&definition=A%20person%20who%20compulsively%20works%20hard%20and%20long%20hours." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="A person who compulsively works hard and long hours."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Withdrawn</label>
+            <a href="definition.html?word=Withdrawn&definition=Not%20wanting%20to%20communicate%20with%20other%20people." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Not wanting to communicate with other people."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Worrier</label>
+            <a href="definition.html?word=Worrier&definition=A%20person%20who%20worries%20a%20great%20deal." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="A person who worries a great deal."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Talkative</label>
+            <a href="definition.html?word=Talkative&definition=Fond%20of%20or%20given%20to%20talking." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Fond of or given to talking."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Tactless</label>
+            <a href="definition.html?word=Tactless&definition=Having%20or%20showing%20a%20lack%20of%20adroitness%20and%20sensitivity%20in%20dealing%20with%20others%20or%20with%20difficult%20issues." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Having or showing a lack of adroitness and sensitivity in dealing with others or with difficult issues."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Too Sensitive</label>
+            <a href="definition.html?word=Too%20Sensitive&definition=Easily%20offended%20or%20upset." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Easily offended or upset."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Timid</label>
+            <a href="definition.html?word=Timid&definition=Showing%20a%20lack%20of%20courage%20or%20confidence;%20easily%20frightened." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Showing a lack of courage or confidence; easily frightened."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Disorganized</label>
+            <a href="definition.html?word=Disorganized&definition=Not%20properly%20planned%20and%20controlled." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Not properly planned and controlled."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Domineering</label>
+            <a href="definition.html?word=Domineering&definition=Asserting%20one's%20will%20over%20another%20in%20an%20arrogant%20way." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Asserting one's will over another in an arrogant way."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Depressed</label>
+            <a href="definition.html?word=Depressed&definition=In%20a%20state%20of%20general%20unhappiness%20or%20despondency." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="In a state of general unhappiness or despondency."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Doubtful</label>
+            <a href="definition.html?word=Doubtful&definition=Feeling%20uncertain%20about%20something." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Feeling uncertain about something."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Inconsistent</label>
+            <a href="definition.html?word=Inconsistent&definition=Not%20staying%20the%20same%20throughout." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Not staying the same throughout."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Intolerant</label>
+            <a href="definition.html?word=Intolerant&definition=Not%20tolerant%20of%20views,%20beliefs,%20or%20behavior%20that%20differ%20from%20one's%20own." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Not tolerant of views, beliefs, or behavior that differ from one's own."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Introvert</label>
+            <a href="definition.html?word=Introvert&definition=A%20shy,%20reticent%20person." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="A shy, reticent person."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Indifferent</label>
+            <a href="definition.html?word=Indifferent&definition=Having%20no%20particular%20interest%20or%20sympathy;%20unconcerned." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Having no particular interest or sympathy; unconcerned."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Messy</label>
+            <a href="definition.html?word=Messy&definition=Untidy%20or%20dirty." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Untidy or dirty."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Manipulative</label>
+            <a href="definition.html?word=Manipulative&definition=Exercising%20unscrupulous%20control%20or%20influence%20over%20a%20person%20or%20situation." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Exercising unscrupulous control or influence over a person or situation."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Moody</label>
+            <a href="definition.html?word=Moody&definition=(of%20a%20person)%20given%20to%20unpredictable%20changes%20of%20mood,%20especially%20sudden%20bouts%20of%20gloominess%20or%20sullenness." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="(of a person) given to unpredictable changes of mood, especially sudden bouts of gloominess or sullenness."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Mumbles</label>
+            <a href="definition.html?word=Mumbles&definition=Say%20something%20indistinctly%20and%20quietly,%20making%20it%20difficult%20for%20others%20to%20hear." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Say something indistinctly and quietly, making it difficult for others to hear."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Show-off</label>
+            <a href="definition.html?word=Show-off&definition=A%20person%20who%20acts%20pretentiously%20or%20who%20publicizes%20his%20or%20her%20own%20accomplishments." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="A person who acts pretentiously or who publicizes his or her own accomplishments."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Stubborn</label>
+            <a href="definition.html?word=Stubborn&definition=Having%20or%20showing%20dogged%20determination%20not%20to%20change%20one's%20attitude%20or%20position%20on%20something,%20especially%20in%20spite%20of%20good%20arguments%20or%20reasons%20to%20do%20so." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Having or showing dogged determination not to change one's attitude or position on something, especially in spite of good arguments or reasons to do so."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Skeptical</label>
+            <a href="definition.html?word=Skeptical&definition=Not%20easily%20convinced;%20having%20doubts%20or%20reservations." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Not easily convinced; having doubts or reservations."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Slow</label>
+            <a href="definition.html?word=Slow&definition=Moving%20or%20operating%20only%20at%20a%20low%20speed;%20not%20quick%20or%20fast." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Moving or operating only at a low speed; not quick or fast."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Loud</label>
+            <a href="definition.html?word=Loud&definition=Producing%20or%20capable%20of%20producing%20much%20noise;%20easily%20audible." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Producing or capable of producing much noise; easily audible."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Lord ore others</label>
+            <a href="definition.html?word=Lord%20ore%20others&definition=To%20act%20in%20a%20superior%20and%20domineering%20manner%20toward%20someone." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="To act in a superior and domineering manner toward someone."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Loner</label>
+            <a href="definition.html?word=Loner&definition=A%20person%20who%20prefers%20not%20to%20associate%20with%20others." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="A person who prefers not to associate with others."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Lazy</label>
+            <a href="definition.html?word=Lazy&definition=Unwilling%20to%20work%20or%20use%20energy." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Unwilling to work or use energy."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Scatterbrained</label>
+            <a href="definition.html?word=Scatterbrained&definition=(of%20a%20person)%20disorganized%20and%20lacking%20in%20concentration." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="(of a person) disorganized and lacking in concentration."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Short-temper</label>
+            <a href="definition.html?word=Short-temper&definition=Having%20a%20tendency%20to%20become%20angry%20very%20quickly." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Having a tendency to become angry very quickly."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Suspicious</label>
+            <a href="definition.html?word=Suspicious&definition=Having%20or%20showing%20a%20cautious%20distrust%20of%20someone%20or%20something." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Having or showing a cautious distrust of someone or something."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Sluggish</label>
+            <a href="definition.html?word=Sluggish&definition=Slow-moving%20or%20inactive." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Slow-moving or inactive."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Restless</label>
+            <a href="definition.html?word=Restless&definition=Unable%20to%20rest%20or%20relax%20as%20a%20result%20of%20anxiety%20or%20boredom." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Unable to rest or relax as a result of anxiety or boredom."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Rash</label>
+            <a href="definition.html?word=Rash&definition=Displaying%20or%20proceeding%20from%20a%20lack%20of%20careful%20consideration%20of%20the%20possible%20consequences%20of%20an%20action." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Displaying or proceeding from a lack of careful consideration of the possible consequences of an action."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Revengeful</label>
+            <a href="definition.html?word=Revengeful&definition=Desiring%20revenge." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Desiring revenge."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Reluctant</label>
+            <a href="definition.html?word=Reluctant&definition=Unwilling%20and%20hesitant;%20disinclined." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Unwilling and hesitant; disinclined."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label><input type="checkbox" name="A"> Changeable</label>
+            <a href="definition.html?word=Changeable&definition=Liable%20to%20change;%20easily%20altered." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Liable to change; easily altered."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="B"> Crafty</label>
+            <a href="definition.html?word=Crafty&definition=Clever%20at%20achieving%20one's%20aims%20by%20indirect%20or%20deceitful%20methods." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Clever at achieving one's aims by indirect or deceitful methods."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="C"> Critical</label>
+            <a href="definition.html?word=Critical&definition=Expressing%20adverse%20or%20disapproving%20comments%20or%20judgments." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Expressing adverse or disapproving comments or judgments."></span>
+            </a>
+          </td>
+          <td>
+            <label><input type="checkbox" name="D"> Compromising</label>
+            <a href="definition.html?word=Compromising&definition=Settling%20a%20dispute%20by%20mutual%20concession." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="Settling a dispute by mutual concession."></span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="4">
+            <strong>Scores:</strong>
+            <table>
+              <tr>
+                <td>Total A: <span id="totalA">0</span></td>
+                <td>Total B: <span id="totalB">0</span></td>
+                <td>Total C: <span id="totalC">0</span></td>
+                <td>Total D: <span id="totalD">0</span></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="button" onclick="calculateScores()">Calculate Scores</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Strengths</th>
+        <th>Weaknesses</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>A</strong><br>
+          Popular - Sanguine<br>
+          (DISC–I/Influencer)
+        </td>
+        <td>
+          Appealing personality<br>
+          Talkative, storyteller<br>
+          Life of the party<br>
+          Good sense of humor<br>
+          Enthusiastic, expressive<br>
+          Cheerful, bubbly<br>
+          Curious<br>
+          Good on stage<br>
+          Lives in the present<br>
+          Volunteers for jobs<br>
+          Changeable disposition<br>
+          Inspires others to join<br>
+          Makes friends easily<br>
+          Thinks up new activities<br>
+          Loves people<br>
+          Thrives on compliments<br>
+          Likes spontaneous activities<br>
+          Creative and colorful<br>
+          Has energy, charms others
+        </td>
+        <td>
+          Compulsive talker<br>
+          Doesn’t follow through<br>
+          Exaggerates<br>
+          Dwells on trivia<br>
+          Can’t remember names<br>
+          Undisciplined<br>
+          Easily distracted<br>
+          Scares others off<br>
+          Has restless energy<br>
+          Egotistical<br>
+          Has loud voice and laugh<br>
+          Controlled by circumstances<br>
+          Hates to be alone<br>
+          Needs to be center stage<br>
+          Wants to be popular<br>
+          Looks for credit<br>
+          Dominates conversation<br>
+          Priorities out of order<br>
+          Wastes time talking<br>
+          Interrupts and doesn’t listen<br>
+          Decides by feelings
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>B</strong><br>
+          Powerful - Choleric<br>
+          (DISC – D/Driver)
+        </td>
+        <td>
+          Innate Leader strengths<br>
+          Dynamic and active<br>
+          Goal-oriented<br>
+          Organizes well<br>
+          Strong-willed<br>
+          Decisive<br>
+          Not easily discouraged<br>
+          Independent<br>
+          Exudes confidence<br>
+          Will lead and organize<br>
+          Sees practical solutions<br>
+          Moves quickly to action<br>
+          Delegates work<br>
+          Insists on results<br>
+          Thrives on opposition<br>
+          Self-sufficient<br>
+          Stimulates activity
+        </td>
+        <td>
+          Bossy<br>
+          Impatient<br>
+          Quick-tempered<br>
+          Can’t relax<br>
+          Enjoys argument<br>
+          Comes on too strong<br>
+          Little need for friends<br>
+          Inflexible<br>
+          Is not complimentary<br>
+          Dislikes tears, emotion<br>
+          Tends to use people<br>
+          Dominates others<br>
+          Decides for others<br>
+          Knows everything<br>
+          Is too independent<br>
+          Can do everything better<br>
+          May make rash decisions<br>
+          May be rude, tactless<br>
+          Work may become a god<br>
+          Demands loyalty<br>
+          May be right but unpopular
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>C</strong><br>
+          Peaceful - Phlegmatic<br>
+          (DISC-S/Stabilizer)
+        </td>
+        <td>
+          Low key personality<br>
+          Easy going, relaxed<br>
+          Calm, cool, collected<br>
+          Competent, steady<br>
+          Good under pressure<br>
+          Avoids conflicts<br>
+          Patient<br>
+          Well-balanced<br>
+          Consistent life<br>
+          Quiet but witty<br>
+          Sympathetic, kind<br>
+          All purpose person<br>
+          Easy to get along with<br>
+          Inoffensive<br>
+          Good listener<br>
+          Enjoys watching people<br>
+          Has many friends<br>
+          Has concern<br>
+          Has administrative abilities<br>
+          Dry sense of humor
+        </td>
+        <td>
+          Indecisive<br>
+          Keeps emotions hidden<br>
+          Would rather watch<br>
+          Hard to get moving<br>
+          Avoids responsibility<br>
+          Quiet will of iron<br>
+          Too compromising<br>
+          Too shy and reticent<br>
+          Self-righteous<br>
+          Stays uninvolved<br>
+          Is not exciting<br>
+          Indifferent to plans<br>
+          Judges others<br>
+          Sarcastic<br>
+          Resists change<br>
+          Dampens enthusiasm<br>
+          Fearful, worried
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>D</strong><br>
+          Perfect - Melancholy<br>
+          (DISC-C/Creative)
+        </td>
+        <td>
+          Deep, thoughtful<br>
+          Analytical<br>
+          Serious, purposeful<br>
+          Perfectionistic<br>
+          High standards<br>
+          Detail-conscious<br>
+          Creative<br>
+          Artistic or musical<br>
+          Philosophical<br>
+          Appreciative of beauty<br>
+          Orderly, organized<br>
+          Neat and tidy<br>
+          Economical<br>
+          Sees the problem<br>
+          Idealistic<br>
+          Deep concern for people<br>
+          Faithful, devoted<br>
+          Can solve other’s problems<br>
+          Makes friends cautiously<br>
+          Will listen to complaints<br>
+          Moved to tears with compassion
+        </td>
+        <td>
+          Remembers the negative<br>
+          Moody and depressed<br>
+          Off in another world<br>
+          Low self-image<br>
+          Deep need for approval<br>
+          Standards too high<br>
+          Hard to please<br>
+          Prefers analysis to work<br>
+          Has selective hearing<br>
+          Self-centered<br>
+          Too introspective<br>
+          Guilt feelings<br>
+          Persecution complex<br>
+          Lives through others<br>
+          Insecure socially<br>
+          Withdrawn, remote<br>
+          Critical of others<br>
+          Holds back affection<br>
+          Suspicious of people<br>
+          Antagonistic<br>
+          Vengeful<br>
+          Full of contradictions
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <footer>
+    <p style="text-align: center;">Adapted from Wired That Way: The Comprehensive Personality Plan, by Marita Littauer and Florence Littauer, 2006</p>
+  </footer>
+
+  <script>
+    function calculateScores() {
+      const categories = ['A', 'B', 'C', 'D'];
+
+      categories.forEach(category => {
+        const selectedOptions = document.querySelectorAll(`input[name='${category}']:checked`);
+        document.getElementById(`total${category}`).textContent = selectedOptions.length;
+      });
+    }
+  </script>
+</body>
+</html>

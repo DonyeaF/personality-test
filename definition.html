@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Definition</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    p {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="word"></h1>
+  <p id="definition"></p>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById('word').textContent = params.get('word');
+    document.getElementById('definition').textContent = params.get('definition');
+  </script>
+</body>
+</html>
