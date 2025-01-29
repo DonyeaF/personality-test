@@ -69,14 +69,16 @@
   </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
 </head>
 <body>
   <h1>Personality Test</h1>
-  <p>For each row of four words, check the one or two words that best describe you. Go through all 40 rows. If unsure, ask a spouse or close friend, or consider what would have applied to you as a child -- the answer that best reflects your natural personality.</p>
+  <p>For each row of four words, check the one or two words that best describe you. Go through all 40 rows. If unsure, ask a spouse or close friend, or consider what would have applied to you as a child -- the answer that best reflects your natural personality. The first 20 show your strengths, and the last 20 reveal your weaknesses.</p>
   <form id="personalityTest">
     <table id="table1">
       <thead>
         <tr>
+          <th style="width: 2%;">#</th>
           <th>Category A</th>
           <th>Category B</th>
           <th>Category C</th>
@@ -85,6 +87,7 @@
       </thead>
       <tbody>
         <tr>
+          <td>1</td>
           <td>
             <label><input type="checkbox" name="A"> Animated</label>
             <a href="definition.html?word=Animated&definition=Full%20of%20life%20or%20excitement;%20lively." target="_blank" class="link-container">
@@ -112,6 +115,7 @@
         </tr>
 
         <tr>
+          <td>2</td>
           <td>
             <label><input type="checkbox" name="A"> Playful</label>
             <a href="definition.html?word=Playful&definition=Fond%20of%20games%20and%20amusement;%20lighthearted." target="_blank" class="link-container">
@@ -138,8 +142,8 @@
           </td>
         </tr>
 
-        <!-- Add more rows as needed -->
         <tr>
+          <td>3</td>
           <td>
             <label><input type="checkbox" name="A"> Sociable</label>
             <a href="definition.html?word=Sociable&definition=Willing%20to%20talk%20and%20engage%20in%20activities%20with%20other%20people;%20friendly." target="_blank" class="link-container">
@@ -167,6 +171,7 @@
         </tr>
 
         <tr>
+          <td>4</td>
           <td>
             <label><input type="checkbox" name="A"> Convincing</label>
             <a href="definition.html?word=Convincing&definition=Capable%20of%20causing%20someone%20to%20believe%20that%20something%20is%20true%20or%20real." target="_blank" class="link-container">
@@ -194,6 +199,7 @@
         </tr>
 
         <tr>
+          <td>5</td>
           <td>
             <label><input type="checkbox" name="A"> Refreshing</label>
             <a href="definition.html?word=Refreshing&definition=Serving%20to%20refresh%20or%20revive%20someone." target="_blank" class="link-container">
@@ -221,6 +227,7 @@
         </tr>
 
         <tr>
+          <td>6</td>
           <td>
             <label><input type="checkbox" name="A"> Spirited</label>
             <a href="definition.html?word=Spirited&definition=Full%20of%20energy,%20enthusiasm,%20and%20determination." target="_blank" class="link-container">
@@ -248,10 +255,11 @@
         </tr>
 
         <tr>
+          <td>7</td>
           <td>
             <label><input type="checkbox" name="A"> Promoter</label>
-            <a href="definition.html?word=Promoter&definition=A%20person%20who%20encourages%20or%20supports%20a%20person,%20group,%20or%20event." target="_blank" class="link-container">
-              <span class="link-icon" data-definition="A person who encourages or supports a person, group, or event."></span>
+            <a href="definition.html?word=Promoter&definition=A%20person%20or%20company%20that%20finances%20or%20organizes%20a%20project%20or%20event." target="_blank" class="link-container">
+              <span class="link-icon" data-definition="A person or company that finances or organizes a project or event."></span>
             </a>
           </td>
           <td>
@@ -275,6 +283,7 @@
         </tr>
 
         <tr>
+          <td>8</td>
           <td>
             <label><input type="checkbox" name="A"> Spontaneous</label>
             <a href="definition.html?word=Spontaneous&definition=Performed%20or%20occurring%20as%20a%20result%20of%20a%20sudden%20inner%20impulse%20or%20inclination%20and%20without%20premeditation%20or%20external%20stimulus." target="_blank" class="link-container">
@@ -302,6 +311,7 @@
         </tr>
 
         <tr>
+          <td>9</td>
           <td>
             <label><input type="checkbox" name="A"> Optimistic</label>
             <a href="definition.html?word=Optimistic&definition=Hopeful%20and%20confident%20about%20the%20future." target="_blank" class="link-container">
@@ -329,6 +339,7 @@
         </tr>
 
         <tr>
+          <td>10</td>
           <td>
             <label><input type="checkbox" name="A"> Funny</label>
             <a href="definition.html?word=Funny&definition=Causing%20laughter%20or%20amusement;%20humorous." target="_blank" class="link-container">
@@ -356,6 +367,7 @@
         </tr>
 
         <tr>
+          <td>11</td>
           <td>
             <label><input type="checkbox" name="A"> Delightful</label>
             <a href="definition.html?word=Delightful&definition=Causing%20delight;%20charming." target="_blank" class="link-container">
@@ -383,6 +395,7 @@
         </tr>
 
         <tr>
+          <td>12</td>
           <td>
             <label><input type="checkbox" name="A"> Cheerful</label>
             <a href="definition.html?word=Cheerful&definition=Noticeably%20happy%20and%20optimistic." target="_blank" class="link-container">
@@ -410,6 +423,7 @@
         </tr>
 
         <tr>
+          <td>13</td>
           <td>
             <label><input type="checkbox" name="A"> Inspiring</label>
             <a href="definition.html?word=Inspiring&definition=Having%20the%20effect%20of%20inspiring%20someone." target="_blank" class="link-container">
@@ -437,6 +451,7 @@
         </tr>
 
         <tr>
+          <td>14</td>
           <td>
             <label><input type="checkbox" name="A"> Demonstrative</label>
             <a href="definition.html?word=Demonstrative&definition=(of%20a%20person)%20tending%20to%20show%20feelings,%20especially%20of%20affection,%20openly." target="_blank" class="link-container">
@@ -464,6 +479,7 @@
         </tr>
 
         <tr>
+          <td>15</td>
           <td>
             <label><input type="checkbox" name="A"> Mixes Easily</label>
             <a href="definition.html?word=Mixes%20Easily&definition=To%20combine%20or%20blend%20into%20one%20mass%20or%20mixture." target="_blank" class="link-container">
@@ -491,6 +507,7 @@
         </tr>
 
         <tr>
+          <td>16</td>
           <td>
             <label><input type="checkbox" name="A"> Talker</label>
             <a href="definition.html?word=Talker&definition=A%20person%20who%20talks%20a%20lot." target="_blank" class="link-container">
@@ -518,6 +535,7 @@
         </tr>
 
         <tr>
+          <td>17</td>
           <td>
             <label><input type="checkbox" name="A"> Lively</label>
             <a href="definition.html?word=Lively&definition=Full%20of%20life%20and%20energy;%20active%20and%20outgoing." target="_blank" class="link-container">
@@ -545,6 +563,7 @@
         </tr>
 
         <tr>
+          <td>18</td>
           <td>
             <label><input type="checkbox" name="A"> Cute</label>
             <a href="definition.html?word=Cute&definition=Attractive%20in%20a%20pretty%20or%20endearing%20way." target="_blank" class="link-container">
@@ -572,6 +591,7 @@
         </tr>
 
         <tr>
+          <td>19</td>
           <td>
             <label><input type="checkbox" name="A"> Popular</label>
             <a href="definition.html?word=Popular&definition=Liked%20or%20admired%20by%20many%20people%20or%20by%20a%20particular%20person%20or%20group." target="_blank" class="link-container">
@@ -599,6 +619,7 @@
         </tr>
 
         <tr>
+          <td>20</td>
           <td>
             <label><input type="checkbox" name="A"> Bouncy</label>
             <a href="definition.html?word=Bouncy&definition=(of%20a%20person)%20cheerful%20and%20lively." target="_blank" class="link-container">
@@ -626,6 +647,7 @@
         </tr>
 
         <tr>
+          <td>21</td>
           <td>
             <label><input type="checkbox" name="A"> Brassy</label>
             <a href="definition.html?word=Brassy&definition=(typically%20of%20a%20woman)%20tastelessly%20showy%20or%20loud%20in%20appearance%20or%20manner." target="_blank" class="link-container">
@@ -653,6 +675,7 @@
         </tr>
 
         <tr>
+          <td>22</td>
           <td>
             <label><input type="checkbox" name="A"> Undisciplined</label>
             <a href="definition.html?word=Undisciplined&definition=Lacking%20in%20discipline;%20uncontrolled%20in%20behavior%20or%20manner." target="_blank" class="link-container">
@@ -680,6 +703,7 @@
         </tr>
 
         <tr>
+          <td>23</td>
           <td>
             <label><input type="checkbox" name="A"> Repetitious</label>
             <a href="definition.html?word=Repetitious&definition=Containing%20or%20characterized%20by%20repetition,%20especially%20when%20unnecessary%20or%20tiresome." target="_blank" class="link-container">
@@ -707,6 +731,7 @@
         </tr>
 
         <tr>
+          <td>24</td>
           <td>
             <label><input type="checkbox" name="A"> Forgetful</label>
             <a href="definition.html?word=Forgetful&definition=Apt%20or%20likely%20not%20to%20remember." target="_blank" class="link-container">
@@ -734,6 +759,7 @@
         </tr>
 
         <tr>
+          <td>25</td>
           <td>
             <label><input type="checkbox" name="A"> Interrupts</label>
             <a href="definition.html?word=Interrupts&definition=Stop%20the%20continuous%20progress%20of%20(an%20activity%20or%20process)." target="_blank" class="link-container">
@@ -761,6 +787,7 @@
         </tr>
 
         <tr>
+          <td>26</td>
           <td>
             <label><input type="checkbox" name="A"> Unpredictable</label>
             <a href="definition.html?word=Unpredictable&definition=Not%20able%20to%20be%20predicted." target="_blank" class="link-container">
@@ -788,6 +815,7 @@
         </tr>
 
         <tr>
+          <td>27</td>
           <td>
             <label><input type="checkbox" name="A"> Haphazard</label>
             <a href="definition.html?word=Haphazard&definition=Lacking%20any%20obvious%20principle%20of%20organization." target="_blank" class="link-container">
@@ -815,6 +843,7 @@
         </tr>
 
         <tr>
+          <td>28</td>
           <td>
             <label><input type="checkbox" name="A"> Permissive</label>
             <a href="definition.html?word=Permissive&definition=Allowing%20or%20characterized%20by%20great%20or%20excessive%20freedom%20of%20behavior." target="_blank" class="link-container">
@@ -842,6 +871,7 @@
         </tr>
 
         <tr>
+          <td>29</td>
           <td>
             <label><input type="checkbox" name="A"> Angered Easily</label>
             <a href="definition.html?word=Angered%20Easily&definition=Quick%20to%20become%20angry." target="_blank" class="link-container">
@@ -869,6 +899,7 @@
         </tr>
 
         <tr>
+          <td>30</td>
           <td>
             <label><input type="checkbox" name="A"> Naive</label>
             <a href="definition.html?word=Naive&definition=(of%20a%20person%20or%20action)%20showing%20a%20lack%20of%20experience,%20wisdom,%20or%20judgment." target="_blank" class="link-container">
@@ -896,6 +927,7 @@
         </tr>
 
         <tr>
+          <td>31</td>
           <td>
             <label><input type="checkbox" name="A"> Wants Credit</label>
             <a href="definition.html?word=Wants%20Credit&definition=Desires%20recognition%20or%20acknowledgment%20for%20something." target="_blank" class="link-container">
@@ -923,6 +955,7 @@
         </tr>
 
         <tr>
+          <td>32</td>
           <td>
             <label><input type="checkbox" name="A"> Talkative</label>
             <a href="definition.html?word=Talkative&definition=Fond%20of%20or%20given%20to%20talking." target="_blank" class="link-container">
@@ -950,6 +983,7 @@
         </tr>
 
         <tr>
+          <td>33</td>
           <td>
             <label><input type="checkbox" name="A"> Disorganized</label>
             <a href="definition.html?word=Disorganized&definition=Not%20properly%20planned%20and%20controlled." target="_blank" class="link-container">
@@ -977,6 +1011,7 @@
         </tr>
 
         <tr>
+          <td>34</td>
           <td>
             <label><input type="checkbox" name="A"> Inconsistent</label>
             <a href="definition.html?word=Inconsistent&definition=Not%20staying%20the%20same%20throughout." target="_blank" class="link-container">
@@ -1004,6 +1039,7 @@
         </tr>
 
         <tr>
+          <td>35</td>
           <td>
             <label><input type="checkbox" name="A"> Messy</label>
             <a href="definition.html?word=Messy&definition=Untidy%20or%20dirty." target="_blank" class="link-container">
@@ -1031,6 +1067,7 @@
         </tr>
 
         <tr>
+          <td>36</td>
           <td>
             <label><input type="checkbox" name="A"> Show-off</label>
             <a href="definition.html?word=Show-off&definition=A%20person%20who%20acts%20pretentiously%20or%20who%20publicizes%20his%20or%20her%20own%20accomplishments." target="_blank" class="link-container">
@@ -1058,6 +1095,7 @@
         </tr>
 
         <tr>
+          <td>37</td>
           <td>
             <label><input type="checkbox" name="A"> Loud</label>
             <a href="definition.html?word=Loud&definition=Producing%20or%20capable%20of%20producing%20much%20noise;%20easily%20audible." target="_blank" class="link-container">
@@ -1085,6 +1123,7 @@
         </tr>
 
         <tr>
+          <td>38</td>
           <td>
             <label><input type="checkbox" name="A"> Scatterbrained</label>
             <a href="definition.html?word=Scatterbrained&definition=(of%20a%20person)%20disorganized%20and%20lacking%20in%20concentration." target="_blank" class="link-container">
@@ -1112,6 +1151,7 @@
         </tr>
 
         <tr>
+          <td>39</td>
           <td>
             <label><input type="checkbox" name="A"> Restless</label>
             <a href="definition.html?word=Restless&definition=Unable%20to%20rest%20or%20relax%20as%20a%20result%20of%20anxiety%20or%20boredom." target="_blank" class="link-container">
@@ -1139,6 +1179,7 @@
         </tr>
 
         <tr>
+          <td>40</td>
           <td>
             <label><input type="checkbox" name="A"> Changeable</label>
             <a href="definition.html?word=Changeable&definition=Liable%20to%20change;%20easily%20altered." target="_blank" class="link-container">
@@ -1170,6 +1211,18 @@
             <strong>Scores:</strong>
             <table>
               <tr>
+                <td>Strengths A: <span id="strengthsA">0</span></td>
+                <td>Strengths B: <span id="strengthsB">0</span></td>
+                <td>Strengths C: <span id="strengthsC">0</span></td>
+                <td>Strengths D: <span id="strengthsD">0</span></td>
+              </tr>
+              <tr>
+                <td>Weaknesses A: <span id="weaknessesA">0</span></td>
+                <td>Weaknesses B: <span id="weaknessesB">0</span></td>
+                <td>Weaknesses C: <span id="weaknessesC">0</span></td>
+                <td>Weaknesses D: <span id="weaknessesD">0</span></td>
+              </tr>
+              <tr>
                 <td>Total A: <span id="totalA">0</span></td>
                 <td>Total B: <span id="totalB">0</span></td>
                 <td>Total C: <span id="totalC">0</span></td>
@@ -1183,6 +1236,7 @@
     <button type="button" onclick="calculateScores()">Calculate Scores</button>
   </form>
 
+  <p>Use your total scores to find your primary and secondary personality type using the table below. If you score 35 in Powerful Choleric, that means your personality is almost entirely Powerful Choleric. But if you have 16 in Powerful Choleric, 14 in Perfect Melancholy, and 5 in the others, you’re mainly Powerful Choleric with strong Perfect Melancholy traits. Your lowest score will show your least dominant personality type.</p>
   <table id="table2">
     <thead>
       <tr>
@@ -1408,11 +1462,25 @@
       const categories = ['A', 'B', 'C', 'D'];
 
       categories.forEach(category => {
-        const selectedOptions = document.querySelectorAll(`input[name='${category}']:checked`);
-        document.getElementById(`total${category}`).textContent = selectedOptions.length;
+      const selectedOptions = document.querySelectorAll(`input[name='${category}']:checked`);
+      const total = selectedOptions.length;
+      let strengths = 0;
+      let weaknesses = 0;
+
+      selectedOptions.forEach(option => {
+        const rowIndex = Array.from(option.closest('tr').parentNode.children).indexOf(option.closest('tr'));
+        if (rowIndex < 20) {
+        strengths++;
+        } else {
+        weaknesses++;
+        }
+      });
+
+      document.getElementById(`total${category}`).textContent = total;
+      document.getElementById(`strengths${category}`).textContent = strengths;
+      document.getElementById(`weaknesses${category}`).textContent = weaknesses;
       });
     }
-
     async function downloadPDF() {
       const { jsPDF } = window.jspdf;
       const doc = new jsPDF('p', 'mm', 'a4');
